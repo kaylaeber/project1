@@ -10,7 +10,7 @@ public class BugSpawn : MonoBehaviour {
 	private bool SpanIsRunning = false;
 	// Use this for initialization
 	void Start () {
-		coroutine = WaitAndSpawnBug(5.0f);
+		coroutine = WaitAndSpawnBug(1.0f);
 		StartCoroutine(coroutine);
 	}
 	
@@ -19,7 +19,7 @@ public class BugSpawn : MonoBehaviour {
 		
 		if(SpanIsRunning == false)
 		{
-			coroutine = WaitAndSpawnBug(Random.Range(2.0f, 5.0f));
+			coroutine = WaitAndSpawnBug(Random.Range(1.0f, 3.0f));
 			StartCoroutine(coroutine);
 		}
 
@@ -28,10 +28,10 @@ public class BugSpawn : MonoBehaviour {
 
 	private IEnumerator WaitAndSpawnBug(float waitTime) {
 		SpanIsRunning = true;
-		Debug.Log("Wait HERE");
+		//Debug.Log("Wait HERE");
 		yield return new WaitForSeconds(waitTime);
 		Instantiate(bugPrefab, transform.position, transform.rotation);
-		Debug.Log("SPAWN BUG");
+		//Debug.Log("SPAWN BUG");
 		SpanIsRunning = false;
 
 	}

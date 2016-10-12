@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BugController : MonoBehaviour {
 
-	public float bugSpeed = 1f;
+	public float bugSpeed = 0.2f;
 	public float bugRotation = 20f;
 
 	public GameSystem gameSystem;
@@ -28,7 +28,7 @@ public class BugController : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		//Destroy(other.gameObject);
 
-		Debug.Log("TRIGGER WORKING");
+		//Debug.Log("TRIGGER WORKING");
 		if(other.gameObject.tag == "bull")
 		{
 			Debug.Log ("BUG HIT");

@@ -12,7 +12,6 @@ public class BulletColliderController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		GetComponent<AudioSource>().enabled = true;
 	
 	}
 	
