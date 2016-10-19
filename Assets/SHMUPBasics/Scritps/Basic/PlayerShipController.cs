@@ -16,8 +16,9 @@ public class PlayerShipController : MonoBehaviour {
 	void Update () {
 		MovePlayer();
 
+		//transform.Translate(Vector3.back * Time.deltaTime * palyerSpeed, Space.World);
+		//transform.Rotate (new Vector3 (1.0f, 0, 0));
 		// Rotate the object around its local X axis at 1 degree per second
-		transform.Rotate(Vector3.right * Time.deltaTime);
 	
 	}
 
