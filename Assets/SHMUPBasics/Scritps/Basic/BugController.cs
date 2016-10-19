@@ -37,8 +37,9 @@ public class BugController : MonoBehaviour {
 			if (gameSystem != null) {
 				gameSystem.HitByBullet ();
 			}
-				
-			Destroy (gameObject);			
+			Destroy (gameObject);	
+			Instantiate (explosion, transform.position, transform.rotation);
+			Debug.Log ("EXPLOSION");
 		}
 
 	}

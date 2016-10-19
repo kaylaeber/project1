@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/SHMUPBasics/Scenes/Kayla'sGame.unity
+  isLoaded: 1
+  isActive: 1

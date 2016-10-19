@@ -5,6 +5,7 @@ public class ObjectHit : MonoBehaviour {
 
 
 	public GameSystem gameSystem;
+	public GameObject explosion;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +25,7 @@ public class ObjectHit : MonoBehaviour {
 			if(gameSystem != null)
 			{
 				gameSystem.HitByBullet();
+				Instantiate (explosion, transform.position, transform.rotation);
 			}
 		}
 		

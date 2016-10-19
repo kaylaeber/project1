@@ -5,6 +5,7 @@ public class DestroyOnInvisible : MonoBehaviour
 {
 	public bool destroySelf = true;
 	public GameObject[] destroyObjects;
+	public GameObject explosion;
 	
 	void OnBecameInvisible()
 	{
@@ -16,6 +17,7 @@ public class DestroyOnInvisible : MonoBehaviour
 		}
 		foreach(GameObject obj in destroyObjects)
 		{
+			Instantiate (explosion, transform.position, transform.rotation);
 			Destroy(obj);
 		}
 	}
